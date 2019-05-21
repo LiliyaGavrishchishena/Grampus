@@ -2,8 +2,10 @@ import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 // configs
 import routes from '../configs/routes';
+import navItems from '../configs/main-nav';
 // components
-import AppNav from './AppHeader/AppNav';
+import AppNav from './AppHeader/AppNav/AppNav';
+import MainPage from '../pages/MainPage';
 // styles
 import './App.css';
 
@@ -21,17 +23,15 @@ const AsyncAboutUsPage = lazy(() =>
 );
 
 class App extends Component {
-  componentDidMount() {
-    const { getUser } = this.props;
-    getUser();
-  }
+  state = {};
 
   render() {
     return (
       <div>
-        <AppNav />
-        <Suspense>
+        <AppNav items={navItems} />
+        <Suspense fallback={MainPage}>
           <Switch>
+            <Route exact path={routes.MAIN} component={MainPage} />
             <Route exact path={routes.BUSINESS} component={AsyncBusinessPage} />
             <Route exact path={routes.FEATURES} component={AsyncFeaturesPage} />
             <Route exact path={routes.PRISING} component={AsyncPrisingPage} />
