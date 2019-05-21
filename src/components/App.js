@@ -5,7 +5,9 @@ import routes from '../configs/routes';
 import navItems from '../configs/main-nav';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
+
 import MainPage from '../pages/MainPage';
+
 // styles
 import './App.css';
 
@@ -29,6 +31,7 @@ class App extends Component {
     return (
       <div>
         <AppNav items={navItems} />
+
         <Suspense fallback={MainPage}>
           <Switch>
             <Route exact path={routes.MAIN} component={MainPage} />
