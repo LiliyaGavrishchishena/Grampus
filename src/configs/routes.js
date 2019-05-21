@@ -6,4 +6,11 @@ export default Object.freeze({
   FEATURES: '/features',
   PRISING: '/prising',
   ABOUT: '/about',
+  PROFILE: '/profile',
+  RATING: '/rating',
+  STATE: '/state',
+  TASKS: '/tasks',
+  HELP: '/help',
+  CALENDAR: '/calendar',
+  SETTINGS: '/settings',
 });
