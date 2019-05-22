@@ -1,12 +1,17 @@
 import React from 'react';
-import UserNav from '../components/UserNav/UserNav';
-import userNavItems from '../configs/user-nav';
+import Slogan from '../components/Slogan/Slogan';
+import Auth from '../components/Auth/Auth';
+// styles
+import styles from './MainPage.module.css';
 
 const MainPage = () => {
   return (
-    <div>
-      <UserNav items={userNavItems} />
-    </div>
+    <section className={styles.section}>
+      <div className={styles.home}>
+        <Slogan />
+        <Auth />
+      </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import navItems from '../configs/main-nav';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
 import MainPage from '../pages/MainPage';
-
+import Profile from './Profile/Profile';
 // styles
 import './App.css';
 
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <AppNav items={navItems} />
-
+        <Profile />
         <Suspense fallback={MainPage}>
           <Switch>
             <Route exact path={routes.MAIN} component={MainPage} />
