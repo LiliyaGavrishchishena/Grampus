@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 // styles
 import styles from './UserNav.module.css';
 
@@ -13,7 +14,7 @@ const UserNav = ({ items = [] }) => (
               exact
               to={path}
               activeClassName={styles.active}
-              className={styles.link}
+              className={styles.linkNav}
             >
               {name}
             </NavLink>
