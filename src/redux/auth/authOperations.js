@@ -1,7 +1,7 @@
 import axios from 'axios';
-
+// actions
 import actions from './authActions';
-
+// selectors
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
@@ -11,6 +11,7 @@ const setBaseURL = () => {
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
+
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = null;
 };

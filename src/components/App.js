@@ -7,6 +7,8 @@ import navItems from '../configs/main-nav';
 import authOperations from '../redux/auth/authOperations';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
+import SignIn from './Auth/SignIn/SignInContainer';
+import SignUp from './Auth/SignUp/SignUpContainer';
 import MainPage from '../pages/MainPage';
 import Profile from './Profile/Profile';
 import Rating from './Rating/Rating';
@@ -48,6 +50,8 @@ class App extends Component {
         <Suspense fallback={MainPage}>
           <Switch>
             <Route exact path={routes.MAIN} component={MainPage} />
+            <Route exact path={routes.SIGNIN} component={SignIn} />
+            <Route exact path={routes.SIGNUP} component={SignUp} />
             <Route exact path={routes.BUSINESS} component={AsyncBusinessPage} />
             <Route exact path={routes.FEATURES} component={AsyncFeaturesPage} />
             <Route exact path={routes.PRISING} component={AsyncPrisingPage} />

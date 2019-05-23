@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-
+// reducers
 import usersReducer from '../redux/users/usersReducer';
 import authReducer from '../redux/auth/authReducer';
 

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-
+// actionTypes
 import types from './authActionTypes';
 
 const user = (state = null, { type, payload }) => {
