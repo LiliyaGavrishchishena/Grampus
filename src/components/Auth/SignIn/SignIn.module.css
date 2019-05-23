@@ -1,0 +1,84 @@
+.auth {
+  background: #fff;
+  opacity: 0.88;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 35%;
+  height: 500px;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  outline: none;
+  width: 480px;
+  height: 50px;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+.button {
+  background-color: #0adb26;
+  border-radius: 5px;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 15%;
+  height: 35px;
+  margin-top: 30px;
+  padding: 8px 0px;
+  font-size: 1rem;
+  z-index: 200;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: rgb(65, 196, 32);
+  border: 2px solid #dbfff5;
+  cursor: pointer;
+}
+
+/* 
+  .createAccount {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18%;
+  }
+
+  .createAccount small {
+    color: rgb(141, 132, 132);
+    font-weight: lighter;
+    font-size: 12px;
+    width: 450px;
+    margin-top: 2%;
+  }
+  
+  .createAccount .sign-up {
+    color: #0adb26;
+    border: 0px solid #fff;
+    font-size: 10pt;
+    font-weight: bold;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 50px;
+  }
+   */

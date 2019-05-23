@@ -46,6 +46,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Profile />
         <AppNav items={navItems} />
         <Suspense fallback={MainPage}>
           <Switch>
