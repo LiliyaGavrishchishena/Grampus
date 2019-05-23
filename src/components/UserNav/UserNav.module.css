@@ -27,14 +27,24 @@
   margin-bottom: 0;
 }
 
+.link:first-of-type::before {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
 .linkNav {
   text-decoration: none;
   color: #000000a6;
 }
 
 .link:hover {
-  color: #57dd49;
+  background-color: rgba(87, 221, 73, 0.2);
   border-right: 2px solid #57dd49;
+}
+
+.linkNav:hover {
+  color: #57dd49;
 }
 
 .active {
