@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // styles
 import styles from './SignIn.module.css';
@@ -30,5 +31,12 @@ const SignInView = ({ email, password, onChange, onSubmit }) => (
     </form>
   </div>
 );
+
+SignInView.propTypes = {
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SignInView;
