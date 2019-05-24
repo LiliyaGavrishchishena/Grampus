@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import routes from '../configs/routes';
 import navItems from '../configs/main-nav';
 import authOperations from '../redux/auth/authOperations';
+import authSelectors from '../redux/auth/authSelectors';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
 import SignIn from './Auth/SignIn/SignInContainer';
@@ -107,11 +108,21 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProp = {
+const mapStateToProps = state => ({
+  user: authSelectors.getUser(state),
+  isAuthenticated: authSelectors.getIsAuthenticated(state),
+});
+
+const mapDispatchToProps = {
   getUser: authOperations.getCurrentUser,
+  exit: authOperations.signOut,
 };
 
+const options = { pure: false };
+
 export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
   null,
-  mapDispatchToProp,
+  options,
 )(App);
