@@ -19,9 +19,9 @@ class SignInContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // const { signIn } = this.props;
-    // signIn({ ...this.state });
-    // this.reset();
+    const { signIn } = this.props;
+    signIn({ ...this.state });
+    this.reset();
     console.log('You are signed in!');
   };
 

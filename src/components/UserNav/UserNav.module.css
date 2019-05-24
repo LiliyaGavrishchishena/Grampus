@@ -46,3 +46,7 @@
   border-right: 2px solid #57dd49;
   background-color: rgba(87, 221, 73, 0.1);
 }
+
+li:first-child {
+  color: red;
+}

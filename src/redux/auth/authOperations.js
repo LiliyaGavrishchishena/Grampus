@@ -5,7 +5,7 @@ import actions from './authActions';
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
-  axios.defaults.baseURL = 'http://localhost:4040';
+  axios.defaults.baseURL = 'http://10.11.1.60:8080';
 };
 
 const setAuthHeader = token => {
@@ -20,7 +20,7 @@ const signUp = credentials => dispatch => {
   dispatch(actions.authRequest());
   setBaseURL();
   axios
-    .post('/auth/signup', credentials)
+    .post('/api/users/register', credentials)
     .then(({ data }) => {
       setAuthHeader(data.token);
       dispatch(actions.authSuccess(data));
@@ -32,7 +32,7 @@ const signIn = credentials => dispatch => {
   dispatch(actions.authRequest());
   setBaseURL();
   axios
-    .post('/auth/signin', credentials)
+    .post('/api/users/login', credentials)
     .then(({ data }) => {
       setAuthHeader(data.token);
       dispatch(actions.authSuccess(data));
@@ -52,7 +52,7 @@ const signOut = () => (dispatch, getState) => {
   };
   setBaseURL();
   axios
-    .post('/auth/signout', {}, config)
+    .post('/api/users/signout', {}, config)
     .then(() => dispatch(actions.signOutSuccess()));
 };
 
@@ -66,7 +66,7 @@ const getCurrentUser = () => (dispatch, getState) => {
   dispatch(actions.getCurrentUserRequest());
   setBaseURL();
   axios
-    .get('/auth/current')
+    .get('/api/users/login')
     .then(({ data }) => {
       setAuthHeader(token);
       return dispatch(actions.getCurrentUserSuccess(data.user));

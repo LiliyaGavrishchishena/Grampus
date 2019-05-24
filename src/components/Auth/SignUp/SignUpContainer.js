@@ -20,9 +20,9 @@ class SignUpContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // const { signUp } = this.props;
-    // signUp({ ...this.state });
-    // this.reset();
+    const { signUp } = this.props;
+    signUp({ ...this.state });
+    this.reset();
     console.log('You are signed up!');
   };
 
