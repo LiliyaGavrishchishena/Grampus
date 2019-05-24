@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignInView from './SignInView';
 
 const INITIAL_STATE = {
   email: '',
@@ -18,9 +19,10 @@ class SignInContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { signIn } = this.props;
-    signIn({ ...this.state });
-    this.reset();
+    // const { signIn } = this.props;
+    // signIn({ ...this.state });
+    // this.reset();
+    console.log('You are signed in!');
   };
 
   reset = () => {
@@ -29,12 +31,11 @@ class SignInContainer extends Component {
 
   render() {
     return (
-      <div>SignInView</div>
-      // <SignInView
-      //   {...this.state}
-      //   onChange={this.handleChange}
-      //   onSubmit={this.handleSubmit}
-      // />
+      <SignInView
+        {...this.state}
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+      />
     );
   }
 }

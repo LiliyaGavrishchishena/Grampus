@@ -17,7 +17,7 @@ import YourTasks from './YourTasks/YourTasks';
 import HelpTasks from './HelpTasks/HelpTasks';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
 import Settings from './Settings/Settings';
-import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
+import ProtectedRoute from '../hocs/ProtectedRoute';
 
 // styles
 import './App.css';

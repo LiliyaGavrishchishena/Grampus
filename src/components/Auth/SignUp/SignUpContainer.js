@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignUpView from './SignUpView';
 
 const INITIAL_STATE = {
   name: '',
@@ -19,9 +20,10 @@ class SignUpContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { signUp } = this.props;
-    signUp({ ...this.state });
-    this.reset();
+    // const { signUp } = this.props;
+    // signUp({ ...this.state });
+    // this.reset();
+    console.log('You are signed up!');
   };
 
   reset = () => {
@@ -30,12 +32,11 @@ class SignUpContainer extends Component {
 
   render() {
     return (
-      <div>SignUpView</div>
-      //   <SignUpView
-      //     {...this.state}
-      //     onChange={this.handleChange}
-      //     onSubmit={this.handleSubmit}
-      //   />
+      <SignUpView
+        {...this.state}
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+      />
     );
   }
 }

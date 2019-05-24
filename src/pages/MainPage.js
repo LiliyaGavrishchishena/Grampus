@@ -1,6 +1,7 @@
 import React from 'react';
 import Slogan from '../components/Slogan/Slogan';
-import SignInView from '../components/Auth/SignIn/SignInView';
+import SignInContainer from '../components/Auth/SignIn/SignInContainer';
+// import SignUpContainer from '../components/Auth/SignUp/SignUpContainer';
 // styles
 import styles from './MainPage.module.css';
 
@@ -9,7 +10,8 @@ const MainPage = () => {
     <section className={styles.section}>
       <div className={styles.home}>
         <Slogan />
-        <SignInView />
+        <SignInContainer />
+        {/* <SignUpContainer /> */}
       </div>
     </section>
   );
