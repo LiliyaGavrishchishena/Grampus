@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+// components
 import SignUpView from './SignUpView';
+import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
   name: '',
@@ -40,4 +42,4 @@ class SignUpContainer extends Component {
     );
   }
 }
-export default SignUpContainer;
+export default withAuth(SignUpContainer);
