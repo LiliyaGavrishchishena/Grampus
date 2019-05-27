@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+// components
 import SignInView from './SignInView';
+import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
   email: '',
@@ -39,4 +41,4 @@ class SignInContainer extends Component {
     );
   }
 }
-export default SignInContainer;
+export default withAuth(SignInContainer);
