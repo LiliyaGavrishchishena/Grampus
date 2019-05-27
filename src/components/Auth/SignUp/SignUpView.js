@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 import styles from './SignUp.module.css';
 
-const SignUpView = ({ name, email, password, onChange, onSubmit }) => (
+const SignUpView = ({ fullName, email, password, onChange, onSubmit }) => (
   <div className={styles.auth}>
     <form className={styles.form} onSubmit={onSubmit}>
       <label className={styles.name}>
         <input
           className={styles.input}
           type="text"
-          name="name"
-          value={name}
+          name="fullName"
+          value={fullName}
           placeholder="Write your name"
           onChange={onChange}
           required
@@ -56,7 +56,7 @@ const SignUpView = ({ name, email, password, onChange, onSubmit }) => (
 );
 
 SignUpView.propTypes = {
-  name: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
