@@ -5,7 +5,7 @@ import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
   fullName: '',
-  email: '',
+  username: '',
   password: '',
 };
 

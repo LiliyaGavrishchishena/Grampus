@@ -5,15 +5,15 @@ import { NavLink } from 'react-router-dom';
 // styles
 import styles from './SignIn.module.css';
 
-const SignInView = ({ email, password, onChange, onSubmit }) => (
+const SignInView = ({ username, password, onChange, onSubmit }) => (
   <div className={styles.auth}>
     <form className={styles.form} onSubmit={onSubmit}>
       <label className={styles.email}>
         <input
           className={styles.input}
           type="text"
-          name="email"
-          value={email}
+          name="username"
+          value={username}
           placeholder="Enter your email"
           onChange={onChange}
           required
@@ -46,7 +46,7 @@ const SignInView = ({ email, password, onChange, onSubmit }) => (
 );
 
 SignInView.propTypes = {
-  email: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,

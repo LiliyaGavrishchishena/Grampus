@@ -4,7 +4,7 @@ import SignInView from './SignInView';
 import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
-  email: '',
+  username: '',
   password: '',
 };
 
