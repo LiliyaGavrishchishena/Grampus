@@ -1,6 +1,5 @@
 export default Object.freeze({
-  MAIN: '/',
-  SIGNIN: '/signin',
+  SIGNIN: '/',
   SIGNUP: '/signup',
   BUSINESS: '/business',
   FEATURES: '/features',

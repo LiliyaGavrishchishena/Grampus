@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+// components
+import SignInView from './SignInView';
+import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
-  email: '',
+  username: '',
   password: '',
 };
 
@@ -21,6 +24,7 @@ class SignInContainer extends Component {
     const { signIn } = this.props;
     signIn({ ...this.state });
     this.reset();
+    console.log('You are signed in!');
   };
 
   reset = () => {
@@ -29,13 +33,12 @@ class SignInContainer extends Component {
 
   render() {
     return (
-      <div>SignInView</div>
-      // <SignInView
-      //   {...this.state}
-      //   onChange={this.handleChange}
-      //   onSubmit={this.handleSubmit}
-      // />
+      <SignInView
+        {...this.state}
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+      />
     );
   }
 }
-export default SignInContainer;
+export default withAuth(SignInContainer);

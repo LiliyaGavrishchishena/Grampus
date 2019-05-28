@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+// components
+import SignUpView from './SignUpView';
+import withAuth from '../../../hocs/withAuth';
 
 const INITIAL_STATE = {
-  name: '',
-  email: '',
+  fullName: '',
+  username: '',
   password: '',
 };
 
@@ -22,6 +25,7 @@ class SignUpContainer extends Component {
     const { signUp } = this.props;
     signUp({ ...this.state });
     this.reset();
+    console.log('You are signed up!');
   };
 
   reset = () => {
@@ -30,13 +34,12 @@ class SignUpContainer extends Component {
 
   render() {
     return (
-      <div>SignUpView</div>
-      //   <SignUpView
-      //     {...this.state}
-      //     onChange={this.handleChange}
-      //     onSubmit={this.handleSubmit}
-      //   />
+      <SignUpView
+        {...this.state}
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+      />
     );
   }
 }
-export default SignUpContainer;
+export default withAuth(SignUpContainer);

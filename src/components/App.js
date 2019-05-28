@@ -5,11 +5,11 @@ import { connect } from 'react-redux';
 import routes from '../configs/routes';
 import navItems from '../configs/main-nav';
 import authOperations from '../redux/auth/authOperations';
+import authSelectors from '../redux/auth/authSelectors';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
-import SignIn from './Auth/SignIn/SignInContainer';
-import SignUp from './Auth/SignUp/SignUpContainer';
-import MainPage from '../pages/MainPage';
+import SignUpPage from '../pages/SignUpPage';
+import SignInPage from '../pages/SignInPage';
 import Profile from './Profile/Profile';
 import Rating from './Rating/Rating';
 import CompanyState from './CompanyState/CompanyState';
@@ -17,7 +17,7 @@ import YourTasks from './YourTasks/YourTasks';
 import HelpTasks from './HelpTasks/HelpTasks';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
 import Settings from './Settings/Settings';
-import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
+import ProtectedRoute from '../hocs/ProtectedRoute';
 
 // styles
 import './App.css';
@@ -47,11 +47,10 @@ class App extends Component {
     return (
       <div>
         <AppNav items={navItems} />
-        <Suspense fallback={MainPage}>
+        <Suspense fallback={SignInPage}>
           <Switch>
-            <Route exact path={routes.MAIN} component={MainPage} />
-            <Route exact path={routes.SIGNIN} component={SignIn} />
-            <Route exact path={routes.SIGNUP} component={SignUp} />
+            <Route exact path={routes.SIGNIN} component={SignInPage} />
+            <Route exact path={routes.SIGNUP} component={SignUpPage} />
             <Route exact path={routes.BUSINESS} component={AsyncBusinessPage} />
             <Route exact path={routes.FEATURES} component={AsyncFeaturesPage} />
             <Route exact path={routes.PRISING} component={AsyncPrisingPage} />
@@ -60,43 +59,43 @@ class App extends Component {
               exact
               path={routes.PROFILE}
               component={Profile}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.RATING}
               component={Rating}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.STATE}
               component={CompanyState}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.TASKS}
               component={YourTasks}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.HELP}
               component={HelpTasks}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.CALENDAR}
               component={SmartCalendar}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.SETTINGS}
               component={Settings}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <Redirect to="/" />
           </Switch>
@@ -106,11 +105,21 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProp = {
+const mapStateToProps = state => ({
+  user: authSelectors.getUser(state),
+  isAuthenticated: authSelectors.getIsAuthenticated(state),
+});
+
+const mapDispatchToProps = {
   getUser: authOperations.getCurrentUser,
+  exit: authOperations.signOut,
 };
 
+const options = { pure: false };
+
 export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
   null,
-  mapDispatchToProp,
+  options,
 )(App);
