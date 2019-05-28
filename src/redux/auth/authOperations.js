@@ -9,7 +9,7 @@ const setBaseURL = () => {
 };
 
 const setAuthHeader = token => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  axios.defaults.headers.common.Authorization = token;
 };
 
 const clearAuthHeader = () => {
@@ -34,6 +34,7 @@ const signIn = credentials => dispatch => {
   axios
     .post('/api/users/login', credentials)
     .then(({ data }) => {
+      console.log(data);
       setAuthHeader(data.token);
       dispatch(actions.authSuccess(data));
     })
