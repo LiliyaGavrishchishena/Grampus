@@ -8,9 +8,8 @@ import authOperations from '../redux/auth/authOperations';
 import authSelectors from '../redux/auth/authSelectors';
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
-import SignIn from './Auth/SignIn/SignInContainer';
-import SignUp from './Auth/SignUp/SignUpContainer';
-import MainPage from '../pages/MainPage';
+import SignUpPage from '../pages/SignUpPage';
+import SignInPage from '../pages/SignInPage';
 import Profile from './Profile/Profile';
 import Rating from './Rating/Rating';
 import CompanyState from './CompanyState/CompanyState';
@@ -47,13 +46,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Profile />
         <AppNav items={navItems} />
-        <Suspense fallback={MainPage}>
+        <Suspense fallback={SignInPage}>
           <Switch>
-            <Route exact path={routes.MAIN} component={MainPage} />
-            <Route exact path={routes.SIGNIN} component={SignIn} />
-            <Route exact path={routes.SIGNUP} component={SignUp} />
+            <Route exact path={routes.SIGNIN} component={SignInPage} />
+            <Route exact path={routes.SIGNUP} component={SignUpPage} />
             <Route exact path={routes.BUSINESS} component={AsyncBusinessPage} />
             <Route exact path={routes.FEATURES} component={AsyncFeaturesPage} />
             <Route exact path={routes.PRISING} component={AsyncPrisingPage} />
@@ -62,43 +59,43 @@ class App extends Component {
               exact
               path={routes.PROFILE}
               component={Profile}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.RATING}
               component={Rating}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.STATE}
               component={CompanyState}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.TASKS}
               component={YourTasks}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.HELP}
               component={HelpTasks}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.CALENDAR}
               component={SmartCalendar}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <ProtectedRoute
               exact
               path={routes.SETTINGS}
               component={Settings}
-              redirectTo="/signin"
+              redirectTo="/"
             />
             <Redirect to="/" />
           </Switch>

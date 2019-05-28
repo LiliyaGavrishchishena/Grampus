@@ -35,7 +35,7 @@ const SignInView = ({ username, password, onChange, onSubmit }) => (
       </button>
     </form>
     <p className={styles.text}>
-      Or you can create account and{' '}
+      Or you can create account and
       <strong>
         <NavLink className={styles.link} to="/signup">
           Sign Up
