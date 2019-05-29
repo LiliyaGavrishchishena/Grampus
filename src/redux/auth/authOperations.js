@@ -5,7 +5,8 @@ import actions from './authActions';
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
-  axios.defaults.baseURL = 'http://10.11.1.162:8080';
+  // axios.defaults.baseURL = 'http://10.11.1.162:8080';
+  axios.defaults.baseURL = 'http://localhost:8080';
 };
 
 const setAuthHeader = token => {
@@ -23,7 +24,7 @@ const signUp = credentials => dispatch => {
     .post('/api/users/register', credentials)
     .then(({ data }) => {
       console.log(data);
-      setAuthHeader(data.token);
+      // setAuthHeader(data.token);
       dispatch(actions.authSuccess(data));
     })
     .catch(error => dispatch(actions.authError(error)));
@@ -35,7 +36,7 @@ const signIn = credentials => dispatch => {
   axios
     .post('/api/users/login', credentials)
     .then(({ data }) => {
-      console.log(data);
+      console.log('token', data);
       setAuthHeader(data.token);
       dispatch(actions.authSuccess(data));
     })
