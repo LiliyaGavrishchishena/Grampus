@@ -5,7 +5,7 @@ import actions from './authActions';
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
-  axios.defaults.baseURL = 'http://10.11.1.40:8080';
+  axios.defaults.baseURL = 'http://10.11.1.162:8080';
 };
 
 const setAuthHeader = token => {

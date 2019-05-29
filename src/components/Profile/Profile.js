@@ -3,15 +3,19 @@ import { connect } from 'react-redux';
 // components
 import UserNav from '../UserNav/UserNav';
 import SignInPage from '../../pages/SignInPage';
+import ProfilesListContainer from './ProfilesListContainer';
 // configs
 import userNavItems from '../../configs/user-nav';
 import authSelectors from '../../redux/auth/authSelectors';
 import authOperation from '../../redux/auth/authOperations';
 
-const Profile = ({ isAuthenticated, user, exit }) => (
+const Profile = ({ isAuthenticated, exit }) => (
   <div>
     {isAuthenticated ? (
-      <UserNav items={userNavItems} signOut={exit} user={user} />
+      <div>
+        <UserNav items={userNavItems} signOut={exit} />
+        <ProfilesListContainer />
+      </div>
     ) : (
       <SignInPage />
     )}
