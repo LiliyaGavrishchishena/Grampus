@@ -1,11 +1,12 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 // configs
 import routes from '../configs/routes';
 import navItems from '../configs/main-nav';
 import authOperations from '../redux/auth/authOperations';
-import authSelectors from '../redux/auth/authSelectors';
+
 // components
 import AppNav from './AppHeader/AppNav/AppNav';
 import SignUpPage from '../pages/SignUpPage';
@@ -36,8 +37,6 @@ const AsyncAboutUsPage = lazy(() =>
 );
 
 class App extends Component {
-  state = {};
-
   componentDidMount() {
     const { getUser } = this.props;
     getUser();
@@ -105,21 +104,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: authSelectors.getUser(state),
-  isAuthenticated: authSelectors.getIsAuthenticated(state),
-});
-
 const mapDispatchToProps = {
   getUser: authOperations.getCurrentUser,
-  exit: authOperations.signOut,
 };
 
-const options = { pure: false };
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
   null,
-  options,
+  mapDispatchToProps,
 )(App);
