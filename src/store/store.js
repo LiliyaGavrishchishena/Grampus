@@ -4,13 +4,13 @@ import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 // reducers
-import usersReducer from '../redux/users/usersReducer';
+import profilesReducer from '../redux/profiles/profilesReducer';
 import authReducer from '../redux/auth/authReducer';
 
 const rootPersistConfig = {
   key: 'root',
   storage,
-  whitelist: 'cart',
+  whitelist: 'auth',
 };
 const sessionPersistConfig = {
   key: 'session',
@@ -19,7 +19,7 @@ const sessionPersistConfig = {
 };
 
 const rootReducer = combineReducers({
-  users: usersReducer,
+  profiles: profilesReducer,
   auth: persistReducer(sessionPersistConfig, authReducer),
 });
 

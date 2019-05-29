@@ -6,9 +6,12 @@
     "antd": "^3.18.2",
     "axios": "^0.18.0",
     "chart.js": "^2.8.0",
+    "history": "^4.9.0",
+    "normalizr": "^3.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-chartkick": "^0.3.0",
+    "react-devtools-core": "^3.6.1",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
@@ -18,7 +21,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
