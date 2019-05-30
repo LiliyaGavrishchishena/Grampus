@@ -1,7 +1,8 @@
 import axios from 'axios';
 import actions from './profilesActions';
 
-axios.defaults.baseURL = 'http://10.11.1.162:8080';
+axios.defaults.baseURL = 'http://10.11.1.83:8080';
+// axios.defaults.baseURL = 'http://localhost:8080';
 
 const fetchProfiles = () => async dispatch => {
   dispatch(actions.fetchProfilesRequest());

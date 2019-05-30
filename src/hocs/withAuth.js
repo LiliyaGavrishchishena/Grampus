@@ -6,12 +6,24 @@ import selectors from '../redux/auth/authSelectors';
 
 const withAuth = WrappedComponent => {
   class WithAuth extends Component {
-    componentDidUpdate() {
+    // componentDidUpdate() {
+    //   const { isAuthenticated, history, location } = this.props;
+
+    //   const { from } = location.state || { from: { pathname: '/' } };
+
+    //   if (isAuthenticated) {
+    //     history.push({
+    //       pathname: from.pathname,
+    //       state: { from: location },
+    //     });
+    //   }
+    // }
+    shouldComponentUpdate(nextProps) {
       const { isAuthenticated, history, location } = this.props;
 
       const { from } = location.state || { from: { pathname: '/' } };
 
-      if (isAuthenticated) {
+      if (isAuthenticated && nextProps.isAuthenticated !== isAuthenticated) {
         history.push({
           pathname: from.pathname,
           state: { from: location },
