@@ -1,16 +1,31 @@
 import types from './authActionTypes';
 
-const authRequest = () => ({
-  type: types.AUTH_REQUEST,
+const signUpRequest = () => ({
+  type: types.SIGNUP_REQUEST,
 });
 
-const authSuccess = data => ({
-  type: types.AUTH_SUCCESS,
+const signUpSuccess = data => ({
+  type: types.SIGNUP_SUCCESS,
   payload: data,
 });
 
-const authError = error => ({
-  type: types.AUTH_ERROR,
+const signUpError = error => ({
+  type: types.SIGNUP_ERROR,
+  payload: {
+    error,
+  },
+});
+const loginRequest = () => ({
+  type: types.LOGIN_REQUEST,
+});
+
+const loginSuccess = data => ({
+  type: types.LOGIN_SUCCESS,
+  payload: data,
+});
+
+const loginError = error => ({
+  type: types.LOGIN_ERROR,
   payload: {
     error,
   },
@@ -34,9 +49,12 @@ const getCurrentUserRequest = () => ({
 });
 
 export default {
-  authRequest,
-  authSuccess,
-  authError,
+  signUpRequest,
+  signUpSuccess,
+  signUpError,
+  loginRequest,
+  loginSuccess,
+  loginError,
   signOutRequest,
   signOutSuccess,
   getCurrentUserSuccess,
