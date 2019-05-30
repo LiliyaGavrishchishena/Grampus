@@ -40,13 +40,25 @@ const signOutSuccess = () => ({
   type: types.SIGN_OUT_SUCCESS,
 });
 
+const setCurrentUser = decoded => ({
+  type: types.SET_CURRENT_USER,
+  payload: { decoded },
+});
+
+const getCurrentUserRequest = () => ({
+  type: types.GET_CURRENT_USER_REQUEST,
+});
+
 const getCurrentUserSuccess = user => ({
   type: types.GET_CURRENT_USER_SUCCESS,
   payload: { user },
 });
 
-const getCurrentUserRequest = () => ({
-  type: types.GET_CURRENT_USER_REQUEST,
+const getCurrentUserError = error => ({
+  type: types.GET_CURRENT_USER_ERROR,
+  payload: {
+    error,
+  },
 });
 
 export default {
@@ -58,6 +70,8 @@ export default {
   loginError,
   signOutRequest,
   signOutSuccess,
+  setCurrentUser,
   getCurrentUserSuccess,
   getCurrentUserRequest,
+  getCurrentUserError,
 };

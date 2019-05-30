@@ -1,22 +1,24 @@
 import axios from 'axios';
-// import jwt_decode from 'jwt-decode';
+
+import jwtDecode from 'jwt-decode';
+import setJWTToken from '../../securityUtils/setJWTToken';
 // actions
 import actions from './authActions';
 // selectors
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
-  axios.defaults.baseURL = 'http://10.11.1.162:8080';
+  axios.defaults.baseURL = 'http://10.11.1.83:8080';
   // axios.defaults.baseURL = 'http://localhost:8080';
 };
 
-const setAuthHeader = token => {
-  axios.defaults.headers.common.Authorization = token;
-};
+// const setAuthHeader = token => {
+//   axios.defaults.headers.common.Authorization = token;
+// };
 
-const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = null;
-};
+// const clearAuthHeader = () => {
+//   axios.defaults.headers.common.Authorization = null;
+// };
 
 const signUp = credentials => dispatch => {
   dispatch(actions.signUpRequest());
@@ -37,9 +39,11 @@ const signIn = credentials => dispatch => {
   axios
     .post('/api/users/login', credentials)
     .then(({ data }) => {
-      console.log('token', data);
-      setAuthHeader(data.token);
-      dispatch(actions.loginSuccess(data));
+      console.log(data);
+      setJWTToken(data.token);
+      const decoded = jwtDecode(data.token);
+      dispatch(actions.loginSuccess(decoded));
+      console.log(decoded);
     })
     .catch(error => dispatch(actions.loginError(error)));
 };
@@ -65,18 +69,18 @@ const getCurrentUser = () => (dispatch, getState) => {
 
   if (!token) return;
 
-  setAuthHeader(token);
+  setJWTToken(token);
 
   dispatch(actions.getCurrentUserRequest());
   setBaseURL();
   axios
     .get('/api/users/register')
     .then(({ data }) => {
-      setAuthHeader(token);
+      setJWTToken(token);
       return dispatch(actions.getCurrentUserSuccess(data.user));
     })
     .catch(error => {
-      clearAuthHeader();
+      setJWTToken();
       console.log('Error while refreshing: ', error);
     });
 };
