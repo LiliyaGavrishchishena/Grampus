@@ -8,9 +8,9 @@ class ProfilesListContainer extends Component {
   state = {};
 
   componentDidMount() {
-    const { fetchProfiles } = this.props;
+    const { fetchAllProfiles } = this.props;
 
-    fetchProfiles();
+    fetchAllProfiles();
   }
 
   render() {
@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  fetchProfiles: profilesOperations.fetchProfiles,
+  fetchAllProfiles: profilesOperations.fetchAllProfiles,
 };
 
 export default connect(

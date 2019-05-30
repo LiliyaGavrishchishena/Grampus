@@ -5,8 +5,8 @@ import types from './authActionTypes';
 const user = (state = null, { type }) => {
   switch (type) {
     // case types.SIGNUP_SUCCESS:
-    // case types.GET_CURRENT_USER_SUCCESS:
-    //   return payload.user;
+    // case types.SET_CURRENT_USER_SUCCESS:
+    //   return payload.decoded;
 
     // case types.SIGNUP_ERROR:
     // case types.SIGN_OUT_SUCCESS:
