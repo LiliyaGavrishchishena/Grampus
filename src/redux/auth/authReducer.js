@@ -34,7 +34,7 @@ const token = (state = null, { type, payload }) => {
 const isAuthenticated = (state = false, { type }) => {
   switch (type) {
     case types.LOGIN_SUCCESS:
-    case types.GET_CURRENT_USER_SUCCESS:
+      // case types.GET_CURRENT_USER_SUCCESS:
       return true;
 
     case types.LOGIN_ERROR:

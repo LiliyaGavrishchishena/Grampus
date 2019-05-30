@@ -15,6 +15,7 @@ const signUpError = error => ({
     error,
   },
 });
+
 const loginRequest = () => ({
   type: types.LOGIN_REQUEST,
 });
