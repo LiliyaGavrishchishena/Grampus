@@ -12,14 +12,6 @@ const setBaseURL = () => {
   // axios.defaults.baseURL = 'http://localhost:8080';
 };
 
-// const setAuthHeader = token => {
-//   axios.defaults.headers.common.Authorization = token;
-// };
-
-// const clearAuthHeader = () => {
-//   axios.defaults.headers.common.Authorization = null;
-// };
-
 const signUp = credentials => dispatch => {
   dispatch(actions.signUpRequest());
   setBaseURL();
@@ -27,7 +19,6 @@ const signUp = credentials => dispatch => {
     .post('/api/users/register', credentials)
     .then(({ data }) => {
       console.log(data);
-      // setAuthHeader(data.token);
       dispatch(actions.signUpSuccess(data));
     })
     .catch(error => dispatch(actions.signUpError(error)));
