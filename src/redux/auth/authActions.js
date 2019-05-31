@@ -40,18 +40,18 @@ const signOutSuccess = () => ({
   type: types.SIGN_OUT_SUCCESS,
 });
 
-const setCurrentUser = decoded => ({
+const setCurrentUser = user => ({
   type: types.SET_CURRENT_USER,
-  payload: { decoded },
+  payload: { user },
 });
 
 const getCurrentUserRequest = () => ({
   type: types.GET_CURRENT_USER_REQUEST,
 });
 
-const getCurrentUserSuccess = user => ({
+const getCurrentUserSuccess = decoded => ({
   type: types.GET_CURRENT_USER_SUCCESS,
-  payload: { user },
+  payload: { decoded },
 });
 
 const getCurrentUserError = error => ({

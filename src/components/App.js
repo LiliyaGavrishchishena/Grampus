@@ -37,10 +37,11 @@ const AsyncAboutUsPage = lazy(() =>
 );
 
 class App extends Component {
-  componentDidMount() {
-    const { getUser } = this.props;
-    getUser();
-  }
+  state = {};
+  // componentDidMount() {
+  //   const { getUser } = this.props;
+  //   getUser();
+  // }
 
   render() {
     return (
