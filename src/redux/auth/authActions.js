@@ -54,9 +54,9 @@ const setCurrentUserRequest = () => ({
   type: types.SET_CURRENT_USER_REQUEST,
 });
 
-const setCurrentUserSuccess = decoded => ({
+const setCurrentUserSuccess = data => ({
   type: types.SET_CURRENT_USER_SUCCESS,
-  payload: { decoded },
+  payload: { data },
 });
 
 const setCurrentUserError = error => ({
