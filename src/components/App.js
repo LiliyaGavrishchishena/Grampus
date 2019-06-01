@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // configs
 import routes from '../configs/routes';
 import navItems from '../configs/main-nav';
+import userNavItems from '../configs/user-nav';
 import authOperations from '../redux/auth/authOperations';
 
 // components
@@ -19,7 +20,7 @@ import HelpTasks from './HelpTasks/HelpTasks';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
 import Settings from './Settings/Settings';
 import ProtectedRoute from '../hocs/ProtectedRoute';
-
+import UserNav from './UserNav/UserNav';
 // styles
 import './App.css';
 
@@ -37,16 +38,17 @@ const AsyncAboutUsPage = lazy(() =>
 );
 
 class App extends Component {
-  componentDidMount() {
-    const { getUser } = this.props;
-
-    getUser();
-  }
+  state = {};
+  // componentDidMount() {
+  //   const { getUser } = this.props;
+  //   getUser();
+  // }
 
   render() {
     return (
       <div>
         <AppNav items={navItems} />
+        <UserNav items={userNavItems} />
         <Suspense fallback={SignInPage}>
           <Switch>
             <Route exact path={routes.SIGNIN} component={SignInPage} />
