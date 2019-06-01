@@ -8,7 +8,7 @@ import actions from './authActions';
 import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
-  axios.defaults.baseURL = 'http://10.11.1.83:8080';
+  axios.defaults.baseURL = 'http://10.11.1.169:8080';
   // axios.defaults.baseURL = 'http://localhost:8080';
 };
 
@@ -33,7 +33,7 @@ const signIn = credentials => dispatch => {
       console.log(data);
       setJWTToken(data.token);
       const decoded = jwtDecode(data.token);
-      dispatch(actions.loginSuccess(decoded));
+      dispatch(actions.loginSuccess(data));
       console.log(decoded);
     })
     .catch(error => dispatch(actions.loginError(error)));
@@ -55,29 +55,30 @@ const signOut = () => (dispatch, getState) => {
     .then(() => dispatch(actions.signOutSuccess()));
 };
 
-const getCurrentUser = () => (dispatch, getState) => {
-  const token = authSelectors.getToken(getState());
+// const getCurrentUser = () => (dispatch, getState) => {
+//   const token = authSelectors.getToken(getState());
 
-  if (!token) return;
+//   if (!token) return;
 
-  setJWTToken(token);
+//   setJWTToken(token);
 
-  dispatch(actions.getCurrentUserRequest());
-  setBaseURL();
-  axios
-    .get('/api/users/register')
-    .then(({ data }) => {
-      setJWTToken(token);
-      return dispatch(actions.getCurrentUserSuccess(data.user));
-    })
-    .catch(error => {
-      setJWTToken();
-      console.log('Error while refreshing: ', error);
-    });
-};
+//   dispatch(actions.getCurrentUserRequest());
+//   setBaseURL();
+//   axios
+//     .get('/api/users/register')
+//     .then(({ data }) => {
+//       setJWTToken(token);
+//       return dispatch(actions.getCurrentUserSuccess(data.user));
+//     })
+//     .catch(error => {
+//       setJWTToken();
+//       console.log('Error while refreshing: ', error);
+//     });
+// };
+
 export default {
   signUp,
   signIn,
   signOut,
-  getCurrentUser,
+  // getCurrentUser,
 };
