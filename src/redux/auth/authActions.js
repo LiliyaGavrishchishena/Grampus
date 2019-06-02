@@ -11,9 +11,7 @@ const signUpSuccess = data => ({
 
 const signUpError = error => ({
   type: types.SIGNUP_ERROR,
-  payload: {
-    error,
-  },
+  payload: error,
 });
 
 const loginRequest = () => ({
@@ -27,39 +25,11 @@ const loginSuccess = data => ({
 
 const loginError = error => ({
   type: types.LOGIN_ERROR,
-  payload: {
-    error,
-  },
+  payload: error,
 });
 
 const signOut = () => ({
   type: types.SIGN_OUT,
-});
-
-// const setCurrentUser = user => ({
-//   type: types.SET_CURRENT_USER,
-//   payload: { user },
-// });
-
-// const setCurrentUser = decoded => ({
-//   type: types.SET_CURRENT_USER,
-//   payload: { decoded },
-// });
-
-const setCurrentUserRequest = () => ({
-  type: types.SET_CURRENT_USER_REQUEST,
-});
-
-const setCurrentUserSuccess = data => ({
-  type: types.SET_CURRENT_USER_SUCCESS,
-  payload: { data },
-});
-
-const setCurrentUserError = error => ({
-  type: types.SET_CURRENT_USER_ERROR,
-  payload: {
-    error,
-  },
 });
 
 export default {
@@ -70,7 +40,4 @@ export default {
   loginSuccess,
   loginError,
   signOut,
-  setCurrentUserSuccess,
-  setCurrentUserRequest,
-  setCurrentUserError,
 };
