@@ -21,8 +21,4 @@ export default [
     name: 'Smart Calendar',
     path: routes.CALENDAR,
   },
-  {
-    name: 'Settings',
-    path: routes.SETTINGS,
-  },
 ];

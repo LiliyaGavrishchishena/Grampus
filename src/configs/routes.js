@@ -9,5 +9,5 @@ export default Object.freeze({
   TASKS: '/tasks',
   HELP: '/help',
   CALENDAR: '/calendar',
-  SETTINGS: '/settings',
+  MYINFO: '/myinfo',
 });

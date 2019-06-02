@@ -5,6 +5,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 // reducers
 import profilesReducer from '../redux/profiles/profilesReducer';
+import userReducer from '../redux/user/userReducer';
 import authReducer from '../redux/auth/authReducer';
 
 const rootPersistConfig = {
@@ -21,6 +22,7 @@ const sessionPersistConfig = {
 const rootReducer = combineReducers({
   profiles: profilesReducer,
   auth: persistReducer(sessionPersistConfig, authReducer),
+  user: userReducer,
 });
 
 const persistedReducer = persistReducer(rootPersistConfig, rootReducer);

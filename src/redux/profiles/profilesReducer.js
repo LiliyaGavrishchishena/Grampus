@@ -3,7 +3,7 @@ import types from './profilesActionTypes';
 export default function profilesReducer(state = [], { type, payload }) {
   switch (type) {
     case types.PROFILES_FETCH_SUCCESS:
-      return payload.profiles;
+      return payload;
 
     default:
       return state;
