@@ -35,6 +35,7 @@ class SignInContainer extends Component {
     return (
       <SignInView
         {...this.state}
+        {...this.props}
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       />
