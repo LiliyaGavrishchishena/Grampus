@@ -10,10 +10,6 @@ export default [
     path: routes.RATING,
   },
   {
-    name: 'Company State',
-    path: routes.STATE,
-  },
-  {
     name: 'Your tasks',
     path: routes.TASKS,
   },

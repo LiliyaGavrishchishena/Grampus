@@ -36,6 +36,7 @@ class SignUpContainer extends Component {
     return (
       <SignUpView
         {...this.state}
+        {...this.props}
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       />

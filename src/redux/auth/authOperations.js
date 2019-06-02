@@ -4,8 +4,6 @@ import jwtDecode from 'jwt-decode';
 import setJWTToken from '../../securityUtils/setJWTToken';
 // actions
 import actions from './authActions';
-// selectors
-import authSelectors from './authSelectors';
 
 const setBaseURL = () => {
   // axios.defaults.baseURL = 'http://10.11.1.169:8080';
@@ -34,25 +32,10 @@ const signIn = credentials => dispatch => {
       setJWTToken(data.token);
       const decoded = jwtDecode(data.token);
       dispatch(actions.loginSuccess(data));
+      dispatch(actions.signUpSuccess(decoded));
       console.log(decoded);
     })
     .catch(error => dispatch(actions.loginError(error)));
-};
-
-const signOut = () => (dispatch, getState) => {
-  dispatch(actions.signOutRequest());
-
-  const token = authSelectors.getToken(getState());
-
-  const config = {
-    headers: {
-      Authorization: token,
-    },
-  };
-  setBaseURL();
-  axios
-    .post('/api/users/signout', {}, config)
-    .then(() => dispatch(actions.signOutSuccess()));
 };
 
 // const getCurrentUser = () => (dispatch, getState) => {
@@ -79,6 +62,5 @@ const signOut = () => (dispatch, getState) => {
 export default {
   signUp,
   signIn,
-  signOut,
   // getCurrentUser,
 };

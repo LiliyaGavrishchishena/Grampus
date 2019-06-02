@@ -32,12 +32,8 @@ const loginError = error => ({
   },
 });
 
-const signOutRequest = () => ({
-  type: types.SIGN_OUT_REQUEST,
-});
-
-const signOutSuccess = () => ({
-  type: types.SIGN_OUT_SUCCESS,
+const signOut = () => ({
+  type: types.SIGN_OUT,
 });
 
 // const setCurrentUser = user => ({
@@ -73,8 +69,7 @@ export default {
   loginRequest,
   loginSuccess,
   loginError,
-  signOutRequest,
-  signOutSuccess,
+  signOut,
   setCurrentUserSuccess,
   setCurrentUserRequest,
   setCurrentUserError,
