@@ -51,7 +51,7 @@ const SignUpView = ({
       </button>
     </form>
     <p className={styles.text}>
-      Have you already created your account?{' '}
+      Have you already created your account?
       <strong>
         <button
           type="button"

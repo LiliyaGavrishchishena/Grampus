@@ -13,7 +13,7 @@ const getCurrentUser = token => dispatch => {
 
   const decoded = jwtDecode(token);
   axios
-    .get(`/api/profile/${decoded.id}`)
+    .get(`/api/profiles/${decoded.id}`)
     .then(({ data }) => {
       dispatch(actions.fetchUserSuccess(data.user));
     })

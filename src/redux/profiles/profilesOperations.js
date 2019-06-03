@@ -10,7 +10,7 @@ const fetchAllProfiles = token => dispatch => {
   setJWTToken(token);
 
   axios
-    .get(`/api/profile/all`)
+    .get(`/api/profiles/all`)
     .then(({ data }) => {
       dispatch(actions.fetchProfilesSuccess(data));
     })
