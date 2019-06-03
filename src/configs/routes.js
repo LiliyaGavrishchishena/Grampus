@@ -1,15 +1,13 @@
 export default Object.freeze({
-  SIGNIN: '/',
-  SIGNUP: '/signup',
+  MAIN: '/',
   BUSINESS: '/business',
   FEATURES: '/features',
   PRISING: '/prising',
   ABOUT: '/about',
   PROFILE: '/profile',
   RATING: '/rating',
-  STATE: '/state',
   TASKS: '/tasks',
   HELP: '/help',
   CALENDAR: '/calendar',
-  SETTINGS: '/settings',
+  MYINFO: '/myinfo',
 });

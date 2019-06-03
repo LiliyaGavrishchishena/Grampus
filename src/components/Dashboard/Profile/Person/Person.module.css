@@ -1,0 +1,13 @@
+.person {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 2px solid #e8e8e6;
+}
+
+.imgBG {
+  width: 150px;
+  height: 100px;
+  background: #ccc;
+  margin-right: 50px;
+}

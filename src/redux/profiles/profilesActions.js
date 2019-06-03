@@ -6,14 +6,12 @@ const fetchProfilesRequest = () => ({
 
 const fetchProfilesSuccess = profiles => ({
   type: types.PROFILES_FETCH_SUCCESS,
-  payload: {
-    profiles,
-  },
+  payload: profiles,
 });
 
 const fetchProfilesError = error => ({
   type: types.PROFILES_FETCH_ERROR,
-  payload: { error },
+  payload: error,
 });
 
 export default {
