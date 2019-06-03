@@ -10,14 +10,6 @@ export default [
     path: routes.RATING,
   },
   {
-    name: 'Your tasks',
-    path: routes.TASKS,
-  },
-  {
-    name: 'Help tasks',
-    path: routes.HELP,
-  },
-  {
     name: 'Smart Calendar',
     path: routes.CALENDAR,
   },

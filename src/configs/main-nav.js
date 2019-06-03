@@ -10,10 +10,6 @@ export default [
     path: routes.FEATURES,
   },
   {
-    name: 'Pricing',
-    path: routes.PRISING,
-  },
-  {
     name: 'About us',
     path: routes.ABOUT,
   },
