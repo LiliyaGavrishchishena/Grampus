@@ -1,15 +1,3 @@
-.auth {
-  background: #fff;
-  opacity: 0.88;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-  width: 35%;
-  height: 500px;
-}
-
 .form {
   width: 80%;
   display: flex;
@@ -85,6 +73,10 @@ input::placeholder {
   text-decoration: none;
   color: #3cb833;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .link:hover {

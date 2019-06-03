@@ -10,10 +10,6 @@ export default [
     path: routes.RATING,
   },
   {
-    name: 'Company State',
-    path: routes.STATE,
-  },
-  {
     name: 'Your tasks',
     path: routes.TASKS,
   },
@@ -24,9 +20,5 @@ export default [
   {
     name: 'Smart Calendar',
     path: routes.CALENDAR,
-  },
-  {
-    name: 'Settings',
-    path: routes.SETTINGS,
   },
 ];

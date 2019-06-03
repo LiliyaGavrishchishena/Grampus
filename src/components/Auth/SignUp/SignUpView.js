@@ -1,11 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import styles from './SignUp.module.css';
 
-const SignUpView = ({ fullName, username, password, onChange, onSubmit }) => (
-  <div className={styles.auth}>
+const SignUpView = ({
+  fullName,
+  username,
+  password,
+  onChange,
+  onSubmit,
+  handleChangeActiveAuth,
+}) => (
+  <>
     <form className={styles.form} onSubmit={onSubmit}>
       <label className={styles.name}>
         <input
@@ -45,14 +51,18 @@ const SignUpView = ({ fullName, username, password, onChange, onSubmit }) => (
       </button>
     </form>
     <p className={styles.text}>
-      Have you already created your account?{' '}
+      Have you already created your account?
       <strong>
-        <NavLink className={styles.link} to="/signin">
+        <button
+          type="button"
+          className={styles.link}
+          onClick={handleChangeActiveAuth}
+        >
           Sign In
-        </NavLink>
+        </button>
       </strong>
     </p>
-  </div>
+  </>
 );
 
 SignUpView.propTypes = {
@@ -61,6 +71,7 @@ SignUpView.propTypes = {
   password: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  handleChangeActiveAuth: PropTypes.func.isRequired,
 };
 
 export default SignUpView;
