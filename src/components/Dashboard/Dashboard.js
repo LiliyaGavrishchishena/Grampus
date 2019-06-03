@@ -6,7 +6,7 @@ import UserNav from '../UserNav/UserNav';
 
 import HelpTasks from './HelpTasks/HelpTasks';
 import Profile from './Profile/Profile';
-import Rating from './Rating/Rating';
+import RatingContainer from './Rating/RatingContainer';
 import MyInfo from './MyInfo/MyInfo';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
 import YourTasks from './YourTasks/YourTasks';
@@ -56,7 +56,7 @@ class Dashboard extends Component {
             <ProtectedRoute
               exact
               path={routes.RATING}
-              component={Rating}
+              component={RatingContainer}
               redirectTo="/"
             />
             <ProtectedRoute
