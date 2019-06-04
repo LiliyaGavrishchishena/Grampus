@@ -15,8 +15,19 @@ const Person = ({ profile, user }) => {
         />
       </div>
       <div className={styles.userName}>{user.fullName}</div>
+      <div className={styles.jobTitle}>{user.jobTitle}</div>
     </div>
   );
 };
 
 export default Person;
+
+// import { Avatar } from 'antd';
+{
+  /* <Avatar
+shape="square"
+size={100}
+icon="user"
+style={{ width: '100%' }}
+/> */
+}

@@ -6,17 +6,10 @@ const RatingView = ({ profiles = [] }) => {
   return (
     <ul className={styles.list}>
       {profiles.map(
-        ({
-          id,
-          profilePicture,
-          information,
-          jobTitle,
-          addLike,
-          addDislike,
-        }) => (
+        ({ id, profilePicture, fullName, jobTitle, addLike, addDislike }) => (
           <li key={id} className={styles.item}>
             <img src={profilePicture} className={styles.img} alt={id} />
-            <p>{information}</p>
+            <p>{fullName}</p>
             <p>{jobTitle}</p>
             <button
               type="button"
