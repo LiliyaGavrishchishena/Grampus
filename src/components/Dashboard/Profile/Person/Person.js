@@ -21,13 +21,3 @@ const Person = ({ profile, user }) => {
 };
 
 export default Person;
-
-// import { Avatar } from 'antd';
-{
-  /* <Avatar
-shape="square"
-size={100}
-icon="user"
-style={{ width: '100%' }}
-/> */
-}
