@@ -41,22 +41,22 @@ const fullName = (state = null, { type, payload }) => {
   }
 };
 
-// const jobTitle = (state = null, { type, payload }) => {
-//   switch (type) {
-//     case types.USER_FETCH_SUCCESS:
-//       return payload.jobTitle;
+const jobTitle = (state = null, { type, payload }) => {
+  switch (type) {
+    case types.USER_FETCH_SUCCESS:
+      return payload.jobTitle;
 
-//     case types.USER_FETCH_ERROR:
-//       return null;
+    case types.USER_FETCH_ERROR:
+      return null;
 
-//     default:
-//       return state;
-//   }
-// };
+    default:
+      return state;
+  }
+};
 
 export default combineReducers({
   userId,
   userName,
   fullName,
-  // jobTitle,
+  jobTitle,
 });

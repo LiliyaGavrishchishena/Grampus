@@ -15,7 +15,7 @@ const Person = ({ profile, user }) => {
         />
       </div>
       <div className={styles.userName}>{user.fullName}</div>
-      {/* <div className={styles.jobTitle}>{user.jobTitle}</div> */}
+      <div className={styles.jobTitle}>{user.jobTitle}</div>
     </div>
   );
 };
