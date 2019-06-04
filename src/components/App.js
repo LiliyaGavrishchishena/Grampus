@@ -10,7 +10,6 @@ import AppNav from './AppHeader/AppNav/AppNav';
 import MainPage from '../pages/MainPage';
 import BusinessPage from '../pages/BusinessPage';
 import FeaturesPage from '../pages/FeaturesPage';
-import PrisingPage from '../pages/PrisingPage';
 import AboutUsPage from '../pages/AboutUsPage';
 
 // styles
@@ -27,7 +26,6 @@ export default class App extends Component {
         <Switch>
           <Route exact path={routes.BUSINESS} component={BusinessPage} />
           <Route exact path={routes.FEATURES} component={FeaturesPage} />
-          <Route exact path={routes.PRISING} component={PrisingPage} />
           <Route exact path={routes.ABOUT} component={AboutUsPage} />
           <Route path={routes.MAIN} component={MainPage} />
           <Redirect to="/" />

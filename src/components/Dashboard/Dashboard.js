@@ -4,12 +4,10 @@ import { connect } from 'react-redux';
 // components
 import UserNav from '../UserNav/UserNav';
 
-import HelpTasks from './HelpTasks/HelpTasks';
 import Profile from './Profile/Profile';
-import Rating from './Rating/Rating';
+import RatingContainer from './Rating/RatingContainer';
 import MyInfo from './MyInfo/MyInfo';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
-import YourTasks from './YourTasks/YourTasks';
 
 import ProtectedRoute from '../../hocs/ProtectedRoute';
 
@@ -56,19 +54,7 @@ class Dashboard extends Component {
             <ProtectedRoute
               exact
               path={routes.RATING}
-              component={Rating}
-              redirectTo="/"
-            />
-            <ProtectedRoute
-              exact
-              path={routes.TASKS}
-              component={YourTasks}
-              redirectTo="/"
-            />
-            <ProtectedRoute
-              exact
-              path={routes.HELP}
-              component={HelpTasks}
+              component={RatingContainer}
               redirectTo="/"
             />
             <ProtectedRoute

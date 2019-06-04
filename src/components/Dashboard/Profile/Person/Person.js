@@ -7,6 +7,7 @@ const Person = ({ profile, user }) => {
     <div className={styles.person}>
       <div className={styles.imgBG}>
         <img
+          className={styles.img}
           src={profile.profilePicture}
           alt={profile.id}
           width="150px"
@@ -14,6 +15,7 @@ const Person = ({ profile, user }) => {
         />
       </div>
       <div className={styles.userName}>{user.fullName}</div>
+      <div className={styles.jobTitle}>{user.jobTitle}</div>
     </div>
   );
 };
