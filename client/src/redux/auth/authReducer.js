@@ -16,7 +16,7 @@ const token = (state = null, { type, payload }) => {
   }
 };
 
-const isAuthenticated = (state = false, { type }) => {
+const isAuthenticated = (state = true, { type }) => {
   switch (type) {
     case types.LOGIN_SUCCESS:
       return true;
