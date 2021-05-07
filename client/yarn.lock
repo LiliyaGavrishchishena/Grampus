@@ -9229,7 +9229,6 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
-<<<<<<< HEAD:client/yarn.lock
 react-big-calendar@^0.23.0:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.23.0.tgz#cc780481548fcefabb04cea05dd1a08456702a67"
@@ -9249,9 +9248,6 @@ react-big-calendar@^0.23.0:
     warning "^4.0.2"
 
 react-chartkick@^0.3.0:
-=======
-react-chartkick@^0.3.1:
->>>>>>> 2513f83593dfbd8335ec6196837643f1ccf12d45:yarn.lock
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-chartkick/-/react-chartkick-0.3.1.tgz#97bed228cf4bfc013d6478989ce92c93a02938ea"
   integrity sha512-kQY0/AYcaBp1bCDPrVhpXmyeOK0xT45WGscXTQqjSn7hLKxoSQn0INya8Tx6q0WUmI6C3aaxi9L3n0uxU8Atsg==
@@ -10948,9 +10944,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
-  integrity sha512-8OaIKfzL5cpx8eCMAhhvTlft8GYF8b2eQr6JkCyVdrgjcytyOmPCXrqXFcUnhonRpLlh5yxEZVohm6mzaowUOw==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@3.4.x:
   version "3.4.10"
