@@ -8521,9 +8521,9 @@ postcss-values-parser@^2.0.0, postcss-values-parser@^2.0.1:
     uniq "^1.0.1"
 
 postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.6:
-  version "7.0.17"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
-  integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
+  version "7.0.36"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
+  integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -9229,7 +9229,6 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
-<<<<<<< HEAD:client/yarn.lock
 react-big-calendar@^0.23.0:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.23.0.tgz#cc780481548fcefabb04cea05dd1a08456702a67"
@@ -9249,9 +9248,6 @@ react-big-calendar@^0.23.0:
     warning "^4.0.2"
 
 react-chartkick@^0.3.0:
-=======
-react-chartkick@^0.3.1:
->>>>>>> 2513f83593dfbd8335ec6196837643f1ccf12d45:yarn.lock
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-chartkick/-/react-chartkick-0.3.1.tgz#97bed228cf4bfc013d6478989ce92c93a02938ea"
   integrity sha512-kQY0/AYcaBp1bCDPrVhpXmyeOK0xT45WGscXTQqjSn7hLKxoSQn0INya8Tx6q0WUmI6C3aaxi9L3n0uxU8Atsg==
