@@ -7014,9 +7014,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
     minimist "0.0.8"
 
 moment@2.x, moment@^2.10.2, moment@^2.24.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -9229,7 +9229,6 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
-<<<<<<< HEAD:client/yarn.lock
 react-big-calendar@^0.23.0:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.23.0.tgz#cc780481548fcefabb04cea05dd1a08456702a67"
@@ -9249,9 +9248,6 @@ react-big-calendar@^0.23.0:
     warning "^4.0.2"
 
 react-chartkick@^0.3.0:
-=======
-react-chartkick@^0.3.1:
->>>>>>> 2513f83593dfbd8335ec6196837643f1ccf12d45:yarn.lock
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-chartkick/-/react-chartkick-0.3.1.tgz#97bed228cf4bfc013d6478989ce92c93a02938ea"
   integrity sha512-kQY0/AYcaBp1bCDPrVhpXmyeOK0xT45WGscXTQqjSn7hLKxoSQn0INya8Tx6q0WUmI6C3aaxi9L3n0uxU8Atsg==
